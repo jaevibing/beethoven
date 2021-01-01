@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+title>
+Beethoven AI by jack-debug
+</title>
+<body>
+<h1><u>Beethoven AI</u></h1>
+<p>Beethoven AI is an AI experiment to generate MIDI files with paino music that sounds similar to Beethoven.</p>
+<h4>The Process</h4>
+<h5>1. Get Datset of Beethoven MIDI files</h5>
+<p>This was relatively easy to find online, if you want the dataset I used, you can find it <a href="http://aitech.ac.jp/~ckelly/SMFguide/template-17.html">here</a>.</p>
+<h5>2. Convert the MIDI files to csv (comma seperated values)</h5>
+<p>I used a program called <a href="https://github.com/andrewchenk/midi-csv">midi-csv</a> and updated it for my purposes. With this, I was able to make a 3 mb csv file which I converted to text to train a text generating AI on. If you want the file for your own experiments, you can access it <a href="beethoven.txt">here</a>.</p>
+<h5>3. Train an AI on my data</h5>
+<p>For this experiment, I decided to use 2 diffferent text generating AI. <a href="https://github.com/sherjilozair/char-rnn-tensorflow">char-rnn-tensorflow</a>, written by Andrej Karpathy and ported to Tensorflow by sherjilozair and <a href='https://openai.com/blog/better-language-models/'>GPT-2</a> developed by OpenAI.</p>
+<h5>4. Get an output from the AI and convert it to MIDI</h5>
+<p>After training, I took an output from the AI and converted it to a MIDI file.</h5>
+<p>Actual Beethoven Song</p>
+<EMBED SRC="beet.midi" hidden=true autostart=false loop=1>
+<p>GPT-2</p>
+<EMBED SRC="gpt.midi" hidden=true autostart=false loop=1>
+<p>char-rnn-tensorflow</p>
+<EMBED SRC="char.midi" hidden=true autostart=false loop=1>
+</body>
+</html>
